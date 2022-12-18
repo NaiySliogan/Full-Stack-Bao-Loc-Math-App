@@ -1,0 +1,46 @@
+.cell {
+  background-color: #8ecaff;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #8ecaff;
+  box-sizing: border-box;
+
+  /* border-bottom: 0; */
+}
+
+.cell input {
+
+  width: 100%;
+  height: 100%;
+  /* padding: 10; */
+  margin: 0;
+  border: 1.5px outset #000;
+  outline:none ;
+  background-color: #8ecaff;
+  text-align: center;
+  font-size: 1.25em;
+  font-weight: bold;
+  /* width: 48px;
+  height: 48px; */
+  /* border-radius: 10px; */
+}
+/* .cell input[type=number]:{
+
+} */
+
+
+.cell input:hover{
+  background-color: #d3e8f9;
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #d3e8f9;
+  text-shadow: 0 0 5px #f99019;;
+}
+.cell input:focus {
+  background-color: #d3e8f9;
+  transform: scale(1.1);
+  text-shadow: 0 0 5px #f99019;
+}
+/* input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button { 
+	-webkit-appearance: none;
+}  */
