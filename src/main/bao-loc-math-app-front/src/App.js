@@ -1,7 +1,8 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useCallback } from "react";
 import Header from "./components/Layout/Header";
 import Board from "./components/Board/Board";
 // import MoviesList from "./components/MoviesList";
+import Button from "./components/UI/Button";
 import classes from "./App.module.css";
 
 function App() {
@@ -12,10 +13,14 @@ function App() {
     dureeExecution: null,
   });
   const [checkClick, setCheckClick] = useState(false);
+  const [isClean, setIsClean] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
+  const [manualSolution, setManualSolution] = useState([]);
 
-  async function fetchSolutionsHandler() {
+  const fetchSolutionsHandler = useCallback(async () => {
+    setCheckClick(false);
+    setIsClean(false);
     setIsLoading(true);
     setError(null);
     try {
@@ -43,7 +48,26 @@ function App() {
     }
     setIsLoading(false);
     setCheckClick(true);
-  }
+  }, []);
+
+  const addManualSolution = (enteredSolution) => {
+    setManualSolution(enteredSolution);
+    setSolution({ solution: enteredSolution });
+    console.log("valeur energistrée : " + enteredSolution);
+    console.log(solution);
+  };
+  const endPuzzleResolutionHandler = (event) => {
+    setCheckClick(false);
+  };
+
+  const isCleanHandler = () => {
+    setIsClean(true);
+  };
+  const changeSolutionHandler = (event) => {
+    setSolution({
+      solution: event,
+    });
+  };
 
   // useEffect(() => {
   //   fetchMoviesHandler();
@@ -68,9 +92,17 @@ function App() {
   return (
     <>
       <Header />
-      <Board sol={solution.solution} checkSubmit={checkClick} />
+      <Board
+        sol={solution.solution}
+        setSol={changeSolutionHandler}
+        checkPuzzleResolution={checkClick}
+        endPuzzleResolution={endPuzzleResolutionHandler}
+        onSaveSolution={addManualSolution}
+        isClean={isClean}
+        onCleaning={isCleanHandler}
+      />
       <section className={classes.section}>
-        <button onClick={fetchSolutionsHandler}>Résoudre le puzzle</button>
+        <Button onClick={fetchSolutionsHandler}>Résoudre le puzzle</Button>
         {content}
       </section>
     </>
