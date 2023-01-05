@@ -1,5 +1,5 @@
 # Full-Stack-Bao-Loc-Math-App
-Application crée avec spring boot et react.
+Application créée avec spring boot et react.
 
 
 ##Informations
