@@ -1,40 +1,105 @@
 .backdrop {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    z-index: 20;
-    background-color: rgba(0, 0, 0, 0.75);
-  }
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.modal {
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 30vh;
+  left: 25%;
+  width: 50%;
+  z-index: 100;
+  overflow: hidden;
+  background-color: #164269;
+  color: white; 
+  border: 2px solid #082843;
+  text-align: center;
+  animation: slide-down 300ms ease-out forwards;
+  font-size: medium;
+}
+
+
+.modal header {
+  text-align: center;
+  background: #985100;
+  padding: 1rem;
+  width: 40%;
+  border-radius:  10px;
+  font-size: 100%;
+}
+
+.modal header h2 {
+  margin: 0;
+  color: white;
+}
+.modal span {
+  font-weight:bold; 
+  color: #ffaf53;
+}
+.content {
+  padding: 1rem;
+}
+
+.actions {
+   width: 100% ;
+   /* margin-left: 2; */
+  /* left : 0%;  */
+  /* border: 2px solid; */
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.actions .button {
+  margin: 0.5rem;
+  font-weight: bold;
+  background-color: #985100;
+  border: 3px solid  #462703;
   
-  .modal {
-    position: fixed;
-    top: 20vh;
-    left: 5%;
-    width: 90%;
-    background-color: white;
-    padding: 1rem;
-    border-radius: 14px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
-    z-index: 30;
-    animation: slide-down 300ms ease-out forwards;
+}
+.actions .button:hover,
+.actions .button:active {
+  background-color: #c06906;
+  border-color: #c06906;
+}
+
+.actions .button2 {
+  margin: 0.5rem;
+  font-weight: bold;
+  background-color: #002a4e;
+  border: 3px solid #06223a;
+}
+.actions .button2:hover,
+.actions .button2:active {
+  background-color: #166db9;
+  border-color: #166db9;
+}
+
+@media (min-width: 768px) {
+  .popup {
+    left: calc(50% - 20rem);
+    width: 40rem;
   }
-  
-  @media (min-width: 768px) {
-    .modal {
-      width: 40rem;
-      left: calc(50% - 20rem);
-    }
+}
+@keyframes slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-3rem);
   }
-  
-  @keyframes slide-down {
-    from {
-      opacity: 0;
-      transform: translateY(-3rem);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
+}

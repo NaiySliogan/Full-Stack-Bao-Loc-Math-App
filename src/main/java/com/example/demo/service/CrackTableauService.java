@@ -16,7 +16,7 @@ public class CrackTableauService implements CrackService{
         long lStartTime = Instant.now().toEpochMilli();
 
         List<Integer> tab = new LinkedList<>(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9));
-        List<List<Integer>> list_permutation = permuter(tab);
+        List<List<Integer>> list_permutation = permute(tab);
         List<List<Integer>> solutions = checkSolutions(list_permutation);
 
         long lEndTime = Instant.now().toEpochMilli();
@@ -34,29 +34,28 @@ public class CrackTableauService implements CrackService{
         return result;
     }
 
-    private List<List<Integer>> permuter(List<Integer> liste) {
+    private List<List<Integer>> permute(List<Integer> list) {
 
-        if (liste.size() == 0) {
-            List<List<Integer>> resultatVide = new ArrayList<List<Integer>>();
-            resultatVide.add(new ArrayList<Integer>());
-            return resultatVide;
+        List<List<Integer>> result = new ArrayList<List<Integer>>();
+
+        if (list.size() == 0) {
+            result.add(new ArrayList<Integer>());
+            return result;
         }
 
-        List<List<Integer>> resultat = new ArrayList<List<Integer>>();
+        Integer firstNumber = list.remove(0);
 
-        Integer premierNombre = liste.remove(0);
+        List<List<Integer>> recursion = permute(list);
+        for (List<Integer> listTemp : recursion) {
 
-        List<List<Integer>> recursion = permuter(liste);
-        for (List<Integer> listeTemp : recursion) {
-
-            for (int index = 0; index <= listeTemp.size(); index++) {
-                List<Integer> listePermute = new ArrayList<Integer>(listeTemp);
-                listePermute.add(index, premierNombre);
-                resultat.add(listePermute);
+            for (int index = 0; index <= listTemp.size(); index++) {
+                List<Integer> listPermute = new ArrayList<Integer>(listTemp);
+                listPermute.add(index, firstNumber);
+                result.add(listPermute);
             }
 
         }
-        return resultat;
+        return result;
     }
 
     private List<List<Integer>> checkSolutions(List<List<Integer>> listTest) {

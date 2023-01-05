@@ -6,18 +6,20 @@ const RulesSummary = () => {
       <div className={classes.spacing}>
         <h2>Contexte</h2>
         <p>
-          Le tableau ci-dessous a été donné à des enfants de 8 ans au Bao-Loc 
+          L'équation ci-dessous a été donné à des enfants de 8 ans au Bao-Loc
           {" ("}Vietnam{")"}. Des mathématiciens européens chevronnés n'ont pas
-          été en mesure de le résoudre.
+          été en mesure de la résoudre.
         </p>
       </div>
       <div>
         <h2>Objectif</h2>
         <p>
-          Écrire un algorithme qui est capable de compléter le tableau
-          ci-dessous en utilisant des chiffres de 1 à 9 avec la contrainte de ne
-          pas pouvoir utiliser deux fois le même chiffre.
+          Compléter les cases bleues de l'équation si dessous en utilisant des
+          chiffres de 1 à 9 avec la contrainte de ne pas pouvoir utiliser deux
+          fois le même chiffre.
         </p>
+        {/* <p className={classes.equation}>Equation : <br /> <br/>
+        a + (13 * b / c) + d + (12 * e) - f - 11 + (g * h / i) - 10 = 66</p> */}
       </div>
     </section>
   );

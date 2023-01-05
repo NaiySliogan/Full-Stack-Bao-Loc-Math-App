@@ -13,10 +13,11 @@
 
 .board table {
   width: 350px;
-  height: 300px;
+  height: 305px;
   margin: 0;
   padding: 0;
   border-spacing: 0;
+  /* border: 2px solid #f99019; */
 }
 
 .board td {
@@ -34,6 +35,7 @@
 }
 .board .default-cell {
   background-color: #f99019;
+  color:black
 }
 
 .align {
@@ -47,6 +49,7 @@
 }
 
 .board .button {
+  font-weight: bold;
   width: 50% ;
   height: 50%;
   padding: 0.50rem 1rem;
@@ -58,7 +61,7 @@
   
 }
 .board .button:hover,
-Iboard .button:active {
+.board .button:active {
   background-color: #c06906;
   border-color: #c06906;
 }

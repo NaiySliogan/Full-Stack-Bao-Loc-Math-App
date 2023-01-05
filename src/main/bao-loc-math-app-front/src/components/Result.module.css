@@ -1,0 +1,133 @@
+.separate{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #164269;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  border-radius: 12px;
+  text-align: center;
+  color: white;
+  margin: 1rem;
+  padding: 1rem;
+  width: 80%;
+  /* height: 80%; */
+  animation: item-appear 1s ease-out forwards;
+
+}
+
+
+.result {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+   /* padding-left: 2rem;
+  padding-right: 2rem; */
+}
+.result .id {
+
+  border: 2px solid;
+  border-radius: 10px;
+  padding: 7px;
+  /* margin-left: 1rem; */
+  margin-right: 1rem; 
+}
+.sub-result {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items:flex-start
+}
+/* .sub-result .solution {
+  /* margin-left: 1rem;
+  margin-right: 1rem; */
+  /* padding: 3px; */
+  /* color: #f7c58c; */
+  /* border: 2px solid;
+  border-radius: 10px;  
+} */
+.sub-result .solution span{
+  color: #f5ab56;
+  font-weight: bold;
+}
+.sub-result .solution .ok {
+  color: white;
+}
+
+.sub-result .solution .error {
+  color: #b91f04;
+  font-weight: bolder;
+
+}
+
+/* .result .date{
+  margin-left: 1rem;
+  margin-right: 1rem;
+  padding: 7px;
+  background-color: #985100; ;
+  border-radius: 10px;
+
+} */
+.sub-result .vitesse {
+  /* margin-left: 1rem; */
+  /* margin-right: 1rem; */
+  /* padding: 3px; */
+  color: #f5ab56;
+}
+
+.supprimer {
+  background-color: #812104 ;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  border: 2px solid #812104 ;
+  border-radius: 14px;
+  padding: 7px;
+}
+/*.supprimer p {
+  background-color:  #ff3c00;
+  border-radius: 10px;
+  width : 40%;
+  text-align: center;
+  font-weight: bold;
+  color: #fff;
+  padding: 3px;
+} */
+
+.supprimer:hover,
+.supprimer:active {
+  /* background-color: #166db9;
+  border-color: #166db9; */
+  background-color: #f99f83;
+  border: 2px solid #f99f83 ;
+}
+.supprimer:active {
+  transform: scale(1.1);
+  
+
+}
+
+@keyframes item-appear {
+  from {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+  /* @keyframes item-disappear {
+    from {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    to {
+      opacity: 0;
+      transform: translateY(-1rem);
+    }
+  } */

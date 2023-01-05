@@ -4,16 +4,31 @@
   align-items: center;
   flex-direction: column;
   margin: auto;
-  margin-bottom: 2rem;
+  margin-bottom: 5rem;
   width: 90%;
   max-width: 40rem;
   text-align: center;
-  /* background-color: white; */
-  /* padding: 1ch; */
-  border-radius: 12px;
+    border-radius: 12px;
 }
 
 .section p {
   font-weight: bold;
   color: #f99019;
 }
+.section .invisible {
+  color: #272727;
+  user-select: none;
+}
+
+.button {
+  font-weight: bold;
+}
+
+
+/* @media (min-width: 768px) {
+  .mobile{
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+} */

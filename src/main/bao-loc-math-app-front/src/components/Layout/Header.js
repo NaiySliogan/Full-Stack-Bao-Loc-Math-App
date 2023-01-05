@@ -6,7 +6,7 @@ const Header = (props) => {
   return (
     <>
       <header className={classes.header}>
-        <h1>Bao Loc Puzzle Mathématique </h1>
+        <h1>Bao-Loc Puzzle</h1>
         <img src={reactIcon} alt="React App" />
       </header>
       <RulesSummary />
