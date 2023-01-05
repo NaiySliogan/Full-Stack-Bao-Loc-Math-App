@@ -2,7 +2,7 @@
 Application créée avec spring boot et react.
 
 
-##Informations
+## Informations
 
 
 Pour lancer l'application veuillez écrire : mvnw spring-boot:run  dans la console.
@@ -15,19 +15,29 @@ Le code du front peut être trouvé dans : ./src/main/bao-loc-math-app-front
 Le build de production se trouve dans ./src/main/resources/static pour que l'application démarre correctement.
 
 
-##Contexte: 
+# Ajouts et modifications prévues dans le futur 
+
+
+- Ajout d'un possibilité de changer ses préférences visuelle de l'application (mode noire, mode blanc)
+
+- Ajout d'un compte individuel permettant de sauvegarder ses préférences et d'une possibilité de s'y connecter via son compte gmail
+
+- Test unitaires
+
+
+## Contexte: 
 Le tableau ci-dessous a été donné à des enfants de 8 ans au Bao-Loc
 (Vietnam). Des mathématiciens européens chevronnés n’ont pas été en mesure de le
 résoudre.
 
 
-##Objectif : 
+## Objectif : 
 Écrire un algorithme qui est capable de compléter le tableau ci-dessous en
 utilisant des chiffres de 1 à 9 avec la contrainte de ne pas pouvoir utiliser deux fois le
 même chiffre.
 
 
-##Mode d'emploi
+## Mode d'emploi
 
 
 Le bouton Valider enregistre la solution proposée dans la base de donnée si elle est valide. Si il y a déjà une solution dans la base de donnée la dernière solution est remplacée. En cas de non respect des consignes un modal d'erreur aparait. En cas de solution incorrecte un modal demande si l'on veut tout de meme l'ajouter à la base de donnée.
